@@ -1,15 +1,23 @@
 #include<iostream>
 using namespace std;
+
 int main(){
 
-    int t,rem,z,add1=0,add2=0;
+    int t,s,rem,z,add1=0,add2=0;
     z=0;
-    cout<<"Enter your six digit: ";
+
     cin>>t;
-    while (t!=0)
+
+    while (t)
     {
-           rem=t%10;
-    t/=10;
+        cin>>s;
+        t--;
+
+         
+    while (s)
+    {
+    rem=s%10;
+    s/=10;
     z++;
     
     if(z<=3){
@@ -24,10 +32,12 @@ int main(){
     }
     if (add1==add2)
     {
-        cout<<"YES";
+        cout<<"YES"<<endl;
     }else{
-        cout<<"NO";
+        cout<<"NO"<<endl;
     }
+    }
+   
     
 
 }
