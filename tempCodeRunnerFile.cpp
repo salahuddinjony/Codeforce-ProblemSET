@@ -1,1 +1,1 @@
-cin >> a[i];
+cout<<x<<endl;
