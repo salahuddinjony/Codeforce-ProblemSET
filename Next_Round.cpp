@@ -8,8 +8,6 @@ int main(){
     {
        cin>>x[i];
     }
-
-    //why we cant use one 'for loop' for this condition?
     
     for (int i =0; i<n; i++)
     {
