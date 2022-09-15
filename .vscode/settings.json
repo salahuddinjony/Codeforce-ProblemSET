@@ -3,6 +3,10 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "string": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "__bit_reference": "cpp",
+        "__mutex_base": "cpp",
+        "tuple": "cpp",
+        "variant": "cpp"
     }
 }
