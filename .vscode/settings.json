@@ -8,7 +8,8 @@
         "__mutex_base": "cpp",
         "tuple": "cpp",
         "variant": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "random": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
