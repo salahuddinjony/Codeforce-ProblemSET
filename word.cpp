@@ -23,7 +23,7 @@ int main(){
     {
         for (int i = 0; i <s.size(); i++)
         {
-           putchar(toupper(s[i])); //print out the charater for uese putchar() function
+           putchar(toupper(s[i])); //print out the charater for use putchar() function
         }
             
     }

@@ -9,7 +9,8 @@
         "tuple": "cpp",
         "variant": "cpp",
         "iomanip": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "ios": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

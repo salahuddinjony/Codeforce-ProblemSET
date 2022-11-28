@@ -4,7 +4,9 @@ using namespace std;
 void slove(){
     int  n;
     cin>>n;
-    if(n==1){cout<<69<<" "<<endl;}
+    if(n==1){
+        cout<<69<<" "<<endl;
+        }
    else if(n==2){
         cout<<3<<" "<<1<<endl;
     }

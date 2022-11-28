@@ -14,7 +14,8 @@ int main(){
     }
     sum=sum/2;
 
-    sort(A,A+a,greater<int>());  ///array decending order sorted 
+    sort(A,A+a,greater<int>());  ///integer array decending order sorted 
+    
     for (int i=0; i<a; i++)
     {
         sum2+=A[i];
