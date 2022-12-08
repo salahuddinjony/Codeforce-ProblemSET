@@ -1,5 +1,7 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+
 int main(){
 
     int t,n;
@@ -9,13 +11,7 @@ int main(){
     {
         cin>>n;
         cin>>s;
-        if (n!=5)
-        {
-            cout<<"NO"<<endl;
-            continue; 
-        }
        sort(s.begin(),s.end());
-
        if (s=="Timru") 
        {
            cout<<"YES"<<endl;
@@ -23,16 +19,24 @@ int main(){
        else{
            cout<<"NO"<<endl;
        }
-       
-        
-        
-
-        
-        
+         
     }
-    
-
-
-
     return 0;
 }
+
+
+
+//Best solution
+
+/* #include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int t,n;
+    cin>>t;
+    string s;
+	while(t--){
+	    cin>>n>>s;
+		sort(s.begin(),s.end());
+		cout<<(s=="Timru"?"YES":"NO")<<endl;
+	}
+} */
