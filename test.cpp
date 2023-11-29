@@ -1,14 +1,31 @@
+#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-int x[5],n,i,t;
-int main()
-{
-     cin>>n;
-    while(n--) {
-        cin>>t;
-        x[t]++;
+
+int main(){
+
+
+  int t,n,a[n],sum=0;
+    cin>>t;
+    while (t--)
+    {
+        cin>>n;
+        for(int i=1;i<=n;i++){
+            cin>>a[i];
+            sum+=a[i];
+
+        }
+        if(sum==0){
+            for (int i =1; i <n; i++)
+            {
+                cout<<"+";
+            }
+            
+
+        }
+       
+
     }
-    x[1]=max(x[1]-x[3],0);
-     cout<<x[3]+x[4]+ceil((double)(x[1]+2*x[2])/4)<<endl;
-    return 0;
+    
+
 }
