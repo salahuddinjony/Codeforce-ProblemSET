@@ -1,33 +1,34 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int main()
 {
-    long long int n, minDi = INT_MAX, idx, size,flag=0;
-    cin >> n;
-    long long int A[n];
-
-    for (int i = 0; i < n; i++)
+    int x = 0;
+    string a;
+    cin >> a;
+    for (int i = 0; i < a.length(); i++)
     {
-        cin >> A[i];
-
-        if (minDi > A[i])
+        if (a[i] != '1' && a[i] != '4')
         {
-            idx = i;
-            minDi = A[i];
+            x++;
         }
-        else if (minDi == A[i])
-        {
-            flag=1;
-            
-        }
-    }
-    if(flag==0){
-        cout<<idx+1<<endl;
-    }
-    else{
-        cout<<"Still Rozdil"<<endl;
-    }
-    
 
-    return 0;
+        if (a[0] == '4')
+        {
+            x++;
+        }
+
+        if (a[i] == '4' && a[i + 1] == '4' && a[i + 2] == '4')
+        {
+            x++;
+        }
+    }
+
+    if (x > 0)
+    {
+        cout << "NO";
+    }
+    else
+    {
+        cout << "YES";
+    }
 }
