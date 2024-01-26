@@ -1,30 +1,55 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-string Caps(string s){
-    transform(s.begin(), s.end(), s.begin(), ::tolower);
-    s[0]-=32;    
-    return s;
-}
-
 int main(){
-    int c=0;
     string s;
     cin>>s;
-    for(int i = 0; i <s.size(); i++){
-        if(s[i]>=97){
-            cout<<Caps(s); 
-            c=1;
-             
-            break;
+    int len=s.size(),lw=0,up=0;
+
+    if(s[0]>='a' and s[0]<='z'){
+
+        for (int i = 0; i <len; i++)
+        {
+           if(s[i]>='a' and s[i]<='z')
+            lw++;
         }
-       
     }
-    if(c==0){
+    
 
+    for (int i = 0; i <len; i++)
+    {
+        if(s[i]>='A' and s[i]<='Z'){
+            up++;
+        }
+    }
+
+    if(lw==1){
+        s[0]=toupper(s[0]);
+        for (int i = 1; i <len; i++)
+        {
+            s[i]=tolower(s[i]);
+        }
+        cout<<s; 
+    }
+    else if (up==len)
+    {
+        transform(s.begin(), s.end(), s.begin(), ::tolower); 
         cout<<s;
-
+        
+    }
+    else{
+        cout<<s<<endl;
     }
     
     
+    
+
+
+    return 0;
 }
+
+
+
+/*
+ Author : SALAH 
+"HARD WORK CAN CHANGE LUCK" 
+*/
