@@ -1,49 +1,68 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int mx = 2e5 + 123;
-int f[mx], b[mx], p[mx];
-
 int main(){
     int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) cin >> p[i];
-    for (int i = 0; i < n; i++) cin >> f[i];
-    for (int i = 0; i < n; i++) cin >> b[i];
-
-    priority_queue<int, vector<int>, greater<int>> q[4][4];  // Assuming the constraints allow max values for f and b as 3
-    for (int i = 0; i < n; i++) q[f[i]][b[i]].push(p[i]);
-
-    int m;
-    cin >> m;
-    while (m--) {
-        int c;
-        cin >> c;
-        int ans = INT_MAX;
-        int F = -1, B = -1;
-
-        for (int i = 1; i <= 3; i++) {  // Assuming f and b values range from 1 to 3
-            if (!q[c][i].empty() && q[c][i].top() < ans) {
-                ans = q[c][i].top();
-                F = c;
-                B = i;
-            }
-            if (!q[i][c].empty() && q[i][c].top() < ans) {
-                ans = q[i][c].top();
-                F = i;
-                B = c;
-            }
-        }
-
-        if (ans == INT_MAX) ans = -1;
-        else {
-            q[F][B].pop();  // Remove the selected element
-        }
+    cin>>n;
+    vector<int>v;
+    while (n--)
+    {
+        int x;
+        cin>>x;
+        v.push_back(x);
         
-        cout << ans <<" ";
     }
+
+    int s=0,d=0,f1=1;
+
+
+
+    while (!v.empty())
+    {
+        if(f1==1){
+            if(v[0]> v.back()){
+                s+=v[0];
+                v.erase(v.begin());
+            }
+            else{
+                s+=v.back();
+                v.pop_back();
+            }
+
+            f1=2;
+        }
+        else{
+             if(v[0]> v.back()){
+                d+=v[0];
+                v.erase(v.begin());
+            }
+            else{
+                d+=v.back();
+                v.pop_back();
+            }
+
+            f1=1;
+
+        }
+
+       
+
+
+    }
+
+    cout<<s<<" "<<d;
+    
+    
+    
+    
+
+
+    
+
 
     return 0;
 }
+
+
 
 /*
  Author : SALAH 
