@@ -13,7 +13,7 @@ int main(){
         return 0;
     }
     for(int i=1; i<=n;i++)  a[i]=i;
-    for (int i =n; i >1; i--)
+    for (int i =n; i >=1; i--)
     {
         swap(a[i-1],a[i]);
     }
